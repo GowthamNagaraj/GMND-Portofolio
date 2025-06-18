@@ -19,6 +19,12 @@ export const metadata = {
 export default function RootLayout({ children}) {
   return (
     <html lang="en">
+      <meta property="og:title" content="Gowtham's Portfolio" />
+      <meta property="og:description" content="MERN Stack Developer Portfolio" />
+      <meta property="og:image" content="/og-image.png" />
+      <meta property="og:url" content="https://gmnd-portofolio.vercel.app/" />
+      <meta name="twitter:card" content="summary_large_image" />
+
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

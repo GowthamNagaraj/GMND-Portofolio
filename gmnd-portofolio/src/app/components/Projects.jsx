@@ -1,4 +1,4 @@
-import React from 'react'
+"use client"
 
 export const Projects = () => {
 
@@ -7,11 +7,13 @@ export const Projects = () => {
       title: "Attendance Dashboard",
       description: "A fullstack app to track user attendance with MongoDB, JWT, and a responsive UI.",
       link: "https://gmnd-attendance-frontend.vercel.app/",
+      imgurl:"/images/attendance-login.png"
     },
     {
       title: "Portfolio Website",
       description: "A personal developer portfolio with dark mode and resume download.",
       link: "https://gmnd-portofolio.vercel.app/",
+      imgurl:"/images/portofolio.png"
     },
   ]
 
@@ -33,6 +35,7 @@ export const Projects = () => {
                 rel="noopener noreferrer"
                 className="text-blue-600 dark:text-blue-300 underline"
               >
+                <img src={project.imgurl} className="rounded mb-4" alt="Project 1" />
                 View Project →
               </a>
             </div>
