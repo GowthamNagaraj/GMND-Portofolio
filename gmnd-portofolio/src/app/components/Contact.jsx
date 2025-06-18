@@ -1,4 +1,6 @@
 "use client"
+import { motion } from 'framer-motion'
+import { fadeUp } from "../lib/animation";
 import React, { useState } from 'react'
 
 export const Contact = () => {
@@ -7,38 +9,9 @@ export const Contact = () => {
     youremail:"",
     yourmsg:"",
   })
-  const [error, setError] = useState(false)
-  const [success, setSuccess] = useState(false)
 
   function handleSubmit(e){
     e.preventDefault();
-
-    // if(formData.youremail === ""){
-    //   setError(true);
-    //   setSuccess(false)
-    //   return;
-    // }else{
-    //   setError(false);
-    //   setSuccess(true);
-    // }
-    // if(formData.yourname === ""){
-    //   setError(true);
-    //   setSuccess(false)
-    //   return;
-    // }else{
-    //   setError(false);
-    //   setSuccess(true);
-    // }
-    // if(formData.yourmsg === ""){
-    //   setError(true);
-    //   setSuccess(false)
-    //   return;
-    // }else{
-    //   setError(false);
-    //   setSuccess(true);
-    // }
-
-
 
     if(formData.youremail === "" || formData.yourname === "" || formData.yourmsg === ""){
       alert("Please fill all the fields");
@@ -50,6 +23,13 @@ export const Contact = () => {
     }
   }
   return (
+    <motion.section
+      {...fadeUp}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+    >
     <section id="contact" className="py-16 px-4 bg-gray-100 dark:bg-gray-800">
       <div className="max-w-xl mx-auto text-center">
         <h2 className="text-3xl font-bold mb-6">Get in Touch</h2>
@@ -98,5 +78,6 @@ export const Contact = () => {
         </form>
       </div>
     </section>
+    </motion.section>
   )
 }
