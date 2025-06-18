@@ -9,6 +9,7 @@ export const Hero = () => {
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
+      id="home"
     >
       <h1 className="text-5xl font-bold mb-4">Hi, I'm Gowtham 👋</h1>
       <p className="text-xl text-gray-600 dark:text-gray-300">
