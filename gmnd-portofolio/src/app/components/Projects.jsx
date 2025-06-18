@@ -11,7 +11,7 @@ export const Projects = () => {
     {
       title: "Portfolio Website",
       description: "A personal developer portfolio with dark mode and resume download.",
-      link: "https://gmnd-attendance-frontend.vercel.app/",
+      link: "https://gmnd-portofolio.vercel.app/",
     },
   ]
 
